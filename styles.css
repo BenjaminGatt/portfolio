@@ -389,6 +389,11 @@ a {
   border: 2px solid var(--white-colour);
   border-radius: 20px;
   text-align: center;
+  transition: background-color 0.2s;
+}
+
+.info-div:hover {
+  background-color: rgba(221, 221, 221, 0.1);
 }
 
 .info-div h1 {
@@ -398,6 +403,17 @@ a {
 
 .contact-info {
   margin-top: 70px;
+}
+
+.contact-info a {
+  color: var(--white-colour);
+  border-bottom: 0px solid var(--black-colour);
+  transition: color 0.2s, border 0.4s;
+}
+
+.contact-info a:hover {
+  color: var(--pink-colour);
+  border-bottom: 1px solid var(--pink-colour);
 }
 
 .contact-info ul {
