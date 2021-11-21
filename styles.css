@@ -55,6 +55,42 @@ ul {
   user-select: none;
 }
 
+.selected {
+  color: var(--pink-colour);
+}
+
+.hidden {
+  /* animation: fade-out 0.2s; */
+  visibility: hidden;
+  opacity: 0;
+}
+
+.visible {
+  /* animation: fade-in 0.2s; */
+  visibility: visible;
+  opacity: 1;
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.5s;
+  transform: translateX(0);
+}
+
+.slide-out-right {
+  animation: slide-out-right 0.5s;
+  transform: translateX(100%);
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.5s;
+  transform: translateX(0);
+}
+
+.slide-out-left {
+  animation: slide-out-left 0.5s;
+  transform: translateX(-100%);
+}
+
 .wrap {
   max-width: 60%;
   height: 100%;
@@ -77,15 +113,19 @@ ul {
   font-size: 20px;
   font-weight: 300;
   text-transform: uppercase;
-  transition-duration: 0.2s;
+  transition: color 0.2s;
+  cursor: pointer;
 }
 
 .header ul li:hover {
   color: var(--pink-colour);
 }
 
-.selected {
-  color: var(--pink-colour);
+.home-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* .logo {
@@ -99,7 +139,7 @@ ul {
 
 .intro {
   margin-top: 70px;
-  max-width: 53%;
+  max-width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,8 +197,8 @@ ul {
   padding: 20px;
   border-radius: 30px;
   height: auto;
-  transition-duration: 0.1s;
-  transition-timing-function: ease-out;
+  transition: background-color 0.1s ease-out;
+  /* transition-timing-function: ease-out; */
 }
 
 .skills-column:hover {
@@ -184,7 +224,7 @@ ul {
 .skills-list {
   color: var(--black-colour);
   line-height: 0;
-  transition-duration: 0.1s;
+  transition: line-height 0.1s, color 0.1s;
   font-family: "Ubuntu Mono", monospace;
   font-weight: 100;
 }
@@ -200,7 +240,7 @@ ul {
 .skills-column li {
   margin-top: 12px;
   text-align: center;
-  transition-duration: 0.1s;
+  transition: color 0.1s;
 }
 
 .skills-column li:hover {
@@ -215,7 +255,7 @@ ul {
 
 .icons-list li {
   margin: 0 6px;
-  transition-duration: 0.2s;
+  transition: transform 0.2s;
 }
 
 .icons-list li:hover {
@@ -230,9 +270,16 @@ ul {
   fill: var(--black-colour);
 }
 
-.icons-svg-fill:hover {
+.icons-svg-fill:hover,
+.icon-android-studio:hover .cls-2,
+.icon-android-studio:hover .cls-3,
+.icon-android-studio:hover .cls-5 {
   fill: #fff;
 }
+
+/* .icon-android-studio:hover .cls-1 {
+  fill: var(--pink-colour);
+} */
 
 .chevron-container {
   margin-top: 20px;
@@ -240,7 +287,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition-duration: 0.2s;
+  transition: margin 0.2s;
 }
 
 .chevron {
@@ -248,7 +295,7 @@ ul {
   width: 18px;
   clip-path: polygon(100% 50%, 100% 75%, 50% 100%, 0 75%, 0 50%, 50% 75%);
   margin-bottom: -8px;
-  transition-duration: 0.1s;
+  transition: height 0.1s, width 0.1s;
   transition-timing-function: ease-out;
 }
 
@@ -298,6 +345,100 @@ ul {
 #Bottom_Graphic_Path_5 {
   fill: #411828;
   transform: translate(460px, 1026.49px);
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0%;
+    visibility: hidden;
+  }
+
+  5% {
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+
+@keyframes slide-out-left {
+  0% {
+    transform: translateX(0);
+    opacity: 100%;
+    visibility: visible;
+  }
+
+  95% {
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0%;
+    visibility: hidden;
+  }
+
+  5% {
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+    opacity: 100%;
+    visibility: visible;
+  }
+
+  95% {
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @keyframes chevron-animation-1 {
