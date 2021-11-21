@@ -28,6 +28,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -72,26 +76,6 @@ ul {
 .visible {
   visibility: visible;
   opacity: 1;
-}
-
-.slide-in-right {
-  animation: slide-in-right 0.5s;
-  transform: translateX(0);
-}
-
-.slide-out-right {
-  animation: slide-out-right 0.5s;
-  transform: translateX(100%);
-}
-
-.slide-in-left {
-  animation: slide-in-left 0.5s;
-  transform: translateX(0);
-}
-
-.slide-out-left {
-  animation: slide-out-left 0.5s;
-  transform: translateX(-100%);
 }
 
 .wrap {
@@ -142,10 +126,22 @@ ul {
   fill: var(--pink-colour);
 } */
 
+/*
+  _    _                        _____                 
+ | |  | |                      |  __ \                
+ | |__| | ___  _ __ ___   ___  | |__) |_ _  __ _  ___ 
+ |  __  |/ _ \| '_ ` _ \ / _ \ |  ___/ _` |/ _` |/ _ \
+ | |  | | (_) | | | | | |  __/ | |  | (_| | (_| |  __/
+ |_|  |_|\___/|_| |_| |_|\___| |_|   \__,_|\__, |\___|
+                                            __/ |     
+                                           |___/      
+*/
+
 .intro {
   margin-top: 70px;
   max-width: 70%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: auto;
@@ -166,6 +162,7 @@ ul {
   width: 100%;
   flex-grow: 1;
   margin-bottom: -30px;
+  min-height: 500px;
 }
 
 .skills-title-div {
@@ -323,6 +320,65 @@ ul {
   height: auto;
 }
 
+/*
+   _______      __  _____                 
+  / ____\ \    / / |  __ \                
+ | |     \ \  / /  | |__) |_ _  __ _  ___ 
+ | |      \ \/ /   |  ___/ _` |/ _` |/ _ \
+ | |____   \  /    | |  | (_| | (_| |  __/
+  \_____|   \/     |_|   \__,_|\__, |\___|
+                                __/ |     
+                               |___/      
+*/
+.cv-contact-btns {
+  display: flex;
+}
+
+.download-cv,
+.contact-me {
+  margin: 70px 15px 0 15px;
+  padding: 10px;
+  border-radius: 20px;
+  color: var(--white-colour);
+  font-size: 20px;
+  font-weight: 300;
+  background-color: rgba(221, 221, 221, 0.1);
+  transition: color 0.2s, background-color 0.2s;
+  cursor: pointer;
+  display: flex;
+}
+
+.download-cv-icon,
+.contact-me-icon {
+  fill: var(--white-colour);
+  transition: fill 0.2s;
+}
+
+.download-cv ul,
+.contact-me ul {
+  display: flex;
+  align-items: center;
+}
+
+.download-cv ul li,
+.contact-me ul li {
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-cv:hover,
+.contact-me:hover {
+  color: var(--pink-colour);
+  background-color: rgba(221, 221, 221, 0.2);
+}
+
+.download-cv:hover .download-cv-icon,
+.contact-me:hover .contact-me-icon {
+  fill: var(--pink-colour);
+}
+
 #Bottom_Graphic_Group {
   transform: translate(-460px, -972.65px);
 }
@@ -350,6 +406,26 @@ ul {
 #Bottom_Graphic_Path_5 {
   fill: #411828;
   transform: translate(460px, 1026.49px);
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.5s;
+  transform: translateX(0);
+}
+
+.slide-out-right {
+  animation: slide-out-right 0.5s;
+  transform: translateX(100%);
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.5s;
+  transform: translateX(0);
+}
+
+.slide-out-left {
+  animation: slide-out-left 0.5s;
+  transform: translateX(-100%);
 }
 
 @keyframes slide-in-left {

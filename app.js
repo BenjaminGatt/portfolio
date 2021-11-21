@@ -7,6 +7,7 @@ const homeBtn = document.getElementById("home-btn");
 const mcastBtn = document.getElementById("mcast-btn");
 const projectsBtn = document.getElementById("projects-btn");
 const cvBtn = document.getElementById("cv-btn");
+const contactMeBtn = document.getElementById("contact-me-btn");
 
 homeBtn.addEventListener("click", () => {
   homeBtn.classList.add("selected");
@@ -115,6 +116,17 @@ cvBtn.addEventListener("click", () => {
     projectsBtn.classList.remove("selected");
   }
 
+  cvPage.classList.remove("slide-out-right");
+  cvPage.classList.add("slide-in-right");
+  show(cvPage);
+});
+
+contactMeBtn.addEventListener("click", () => {
+  cvBtn.classList.add("selected");
+  reset(homePage);
+  homePage.classList.add("slide-out-left");
+  hide(homePage);
+  homeBtn.classList.remove("selected");
   cvPage.classList.remove("slide-out-right");
   cvPage.classList.add("slide-in-right");
   show(cvPage);

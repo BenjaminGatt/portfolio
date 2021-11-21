@@ -20,7 +20,7 @@
   </head>
   <body>
     <div class="wrap">
-      <div class="header">
+      <div class="header no-select">
         <ul>
           <!-- <li>
             <div class="logo">
@@ -46,16 +46,64 @@
           <li class="selected" id="home-btn">Home</li>
           <li id="mcast-btn">MCAST</li>
           <li id="projects-btn">Projects</li>
-          <li id="cv-btn">CV</li>
+          <li id="cv-btn">CV | Contact</li>
         </ul>
       </div>
-      <section class="home-page visible">
+      <section class="home-page visible no-height">
         <div class="intro">
           <h1>
             Hi. I'm Ben, a Multimedia Software Development student at MCAST.
             This is my portfolio where I display my school assignments, as well
             as my side projects.
           </h1>
+          <div class="cv-contact-btns">
+            <a
+              class="download-cv no-select"
+              href="files/benjamin-gatt-cv.pdf"
+              target="_blank"
+            >
+              <ul>
+                <li>Download CV</li>
+                <li>
+                  <svg
+                    class="download-cv-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="45"
+                    height="31.5"
+                    viewBox="0 0 45 31.5"
+                  >
+                    <path
+                      id="Icon_awesome-cloud-download-alt"
+                      data-name="Icon awesome-cloud-download-alt"
+                      d="M37.8,15.933A6.758,6.758,0,0,0,31.5,6.75a6.716,6.716,0,0,0-3.748,1.139,11.251,11.251,0,0,0-21,5.611c0,.19.007.38.014.57a10.128,10.128,0,0,0,3.361,19.68H36a9,9,0,0,0,1.8-17.817ZM28.455,22.17,21.045,29.58a1.129,1.129,0,0,1-1.589,0L12.045,22.17a1.124,1.124,0,0,1,.795-1.92h4.6V12.375a1.128,1.128,0,0,1,1.125-1.125h3.375a1.128,1.128,0,0,1,1.125,1.125V20.25h4.6a1.124,1.124,0,0,1,.795,1.92Z"
+                      transform="translate(0 -2.25)"
+                    />
+                  </svg>
+                </li>
+              </ul>
+            </a>
+            <div class="contact-me" id="contact-me-btn">
+              <ul>
+                <li>Contact Me</li>
+                <li>
+                  <svg
+                    class="contact-me-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="45"
+                    height="30"
+                    viewBox="0 0 30 24"
+                  >
+                    <path
+                      id="Icon_material-email"
+                      data-name="Icon material-email"
+                      d="M30,6H6A3,3,0,0,0,3.015,9L3,27a3.009,3.009,0,0,0,3,3H30a3.009,3.009,0,0,0,3-3V9A3.009,3.009,0,0,0,30,6Zm0,6L18,19.5,6,12V9l12,7.5L30,9Z"
+                      transform="translate(-3 -6)"
+                    />
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="skills-section">
           <div class="skills-title-div">
@@ -410,7 +458,33 @@
       </section>
       <section class="mcast-page hidden">mcast-page</section>
       <section class="projects-page hidden">projects-page</section>
-      <section class="cv-page hidden">cv-page</section>
+      <section class="cv-page hidden">
+        <a
+          class="download-cv no-select"
+          href="files/benjamin-gatt-cv.pdf"
+          target="_blank"
+        >
+          <ul>
+            <li>Download my CV here</li>
+            <li>
+              <svg
+                class="download-cv-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="45"
+                height="31.5"
+                viewBox="0 0 45 31.5"
+              >
+                <path
+                  id="Icon_awesome-cloud-download-alt"
+                  data-name="Icon awesome-cloud-download-alt"
+                  d="M37.8,15.933A6.758,6.758,0,0,0,31.5,6.75a6.716,6.716,0,0,0-3.748,1.139,11.251,11.251,0,0,0-21,5.611c0,.19.007.38.014.57a10.128,10.128,0,0,0,3.361,19.68H36a9,9,0,0,0,1.8-17.817ZM28.455,22.17,21.045,29.58a1.129,1.129,0,0,1-1.589,0L12.045,22.17a1.124,1.124,0,0,1,.795-1.92h4.6V12.375a1.128,1.128,0,0,1,1.125-1.125h3.375a1.128,1.128,0,0,1,1.125,1.125V20.25h4.6a1.124,1.124,0,0,1,.795,1.92Z"
+                  transform="translate(0 -2.25)"
+                />
+              </svg>
+            </li>
+          </ul>
+        </a>
+      </section>
       <!-- <div class="bottom-design">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 107.808">
           <g id="Bottom_Graphic_Group">
