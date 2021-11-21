@@ -59,14 +59,17 @@ ul {
   color: var(--pink-colour);
 }
 
+.no-height {
+  height: 0;
+}
+
 .hidden {
-  /* animation: fade-out 0.2s; */
   visibility: hidden;
   opacity: 0;
+  display: none;
 }
 
 .visible {
-  /* animation: fade-in 0.2s; */
   visibility: visible;
   opacity: 1;
 }
@@ -121,8 +124,10 @@ ul {
   color: var(--pink-colour);
 }
 
-.home-page {
-  width: 100%;
+.home-page,
+.mcast-page,
+.projects-page,
+.cv-page {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -125,14 +125,24 @@ function reset(el) {
   el.classList.remove("slide-out-right");
   el.classList.remove("slide-in-left");
   el.classList.remove("slide-out-left");
+  setTimeout(height, 0.5, el);
 }
 
 function hide(el) {
   el.classList.remove("visible");
   el.classList.add("hidden");
+  setTimeout(noHeight, 0.5, el);
 }
 
 function show(el) {
   el.classList.remove("hidden");
   el.classList.add("visible");
+}
+
+function noHeight(el) {
+  el.classList.add("no-height");
+}
+
+function height(el) {
+  el.classList.remove("no-height");
 }
