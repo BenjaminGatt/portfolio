@@ -151,6 +151,7 @@ a {
   font-size: 24px;
   font-weight: 300;
   line-height: 1.5;
+  margin-bottom: 50px;
 }
 
 .skills-section {
@@ -334,9 +335,13 @@ a {
   display: flex;
 }
 
+.download-cv-div {
+  margin: 70px 0 70px 0;
+}
+
 .download-cv,
 .contact-me {
-  margin: 70px 15px 0 15px;
+  margin: 0 15px;
   padding: 10px;
   border-radius: 20px;
   color: var(--white-colour);
@@ -376,6 +381,59 @@ a {
 
 .download-cv:hover .download-cv-icon,
 .contact-me:hover .contact-me-icon {
+  fill: var(--pink-colour);
+}
+
+.info-div {
+  padding: 30px;
+  border: 2px solid var(--white-colour);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.info-div h1 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.contact-info {
+  margin-top: 70px;
+}
+
+.contact-info ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contact-icon {
+  fill: var(--pink-colour);
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.social-info {
+  margin-top: 70px;
+}
+
+.social-info ul {
+  display: flex;
+}
+
+.social-icon {
+  fill: var(--white-colour);
+  margin: 10px;
+  transition: fill 0.2s;
+}
+
+.social-icon:hover {
   fill: var(--pink-colour);
 }
 
