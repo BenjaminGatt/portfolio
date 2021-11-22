@@ -385,6 +385,16 @@ a {
 
 .project-description {
   margin-bottom: 10px;
+  line-height: 20px;
+}
+
+.project-description a {
+  color: var(--pink-colour);
+  transition: color 0.2s;
+}
+
+.project-description a:hover {
+  color: #fff;
 }
 
 .project-links-list {
@@ -398,12 +408,14 @@ a {
 }
 
 .project-links-list a {
+  border-bottom: 0px solid rgba(221, 221, 221, 0.1);
   color: var(--pink-colour);
-  transition: color 0.2s;
+  transition: color 0.2s, border 0.3s;
 }
 
 .project-links-list a:hover {
   color: var(--white-colour);
+  border-bottom: 1px solid var(--white-colour);
 }
 
 .project-tech-list {

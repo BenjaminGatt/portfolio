@@ -1,10 +1,10 @@
 const homePage = document.querySelector(".home-page");
-const mcastPage = document.querySelector(".mcast-page");
+// const mcastPage = document.querySelector(".mcast-page");
 const projectsPage = document.querySelector(".projects-page");
 const cvPage = document.querySelector(".cv-page");
 
 const homeBtn = document.getElementById("home-btn");
-const mcastBtn = document.getElementById("mcast-btn");
+// const mcastBtn = document.getElementById("mcast-btn");
 const projectsBtn = document.getElementById("projects-btn");
 const cvBtn = document.getElementById("cv-btn");
 const contactMeBtn = document.getElementById("contact-me-btn");
@@ -12,12 +12,13 @@ const contactMeBtn = document.getElementById("contact-me-btn");
 homeBtn.addEventListener("click", () => {
   homeBtn.classList.add("selected");
 
-  if (mcastPage.classList.contains("visible")) {
-    reset(mcastPage);
-    mcastPage.classList.add("slide-out-right");
-    hide(mcastPage);
-    mcastBtn.classList.remove("selected");
-  } else if (projectsPage.classList.contains("visible")) {
+  // if (mcastPage.classList.contains("visible")) {
+  //   reset(mcastPage);
+  //   mcastPage.classList.add("slide-out-right");
+  //   hide(mcastPage);
+  //   mcastBtn.classList.remove("selected");
+  // }
+  if (projectsPage.classList.contains("visible")) {
     reset(projectsPage);
     projectsPage.classList.add("slide-out-right");
     hide(projectsPage);
@@ -34,36 +35,36 @@ homeBtn.addEventListener("click", () => {
   show(homePage);
 });
 
-mcastBtn.addEventListener("click", () => {
-  mcastBtn.classList.add("selected");
+// mcastBtn.addEventListener("click", () => {
+//   mcastBtn.classList.add("selected");
 
-  if (homePage.classList.contains("visible")) {
-    reset(homePage);
-    homePage.classList.add("slide-out-left");
-    hide(homePage);
-    homeBtn.classList.remove("selected");
+//   if (homePage.classList.contains("visible")) {
+//     reset(homePage);
+//     homePage.classList.add("slide-out-left");
+//     hide(homePage);
+//     homeBtn.classList.remove("selected");
 
-    mcastPage.classList.add("slide-in-right");
-  } else if (projectsPage.classList.contains("visible")) {
-    reset(projectsPage);
-    projectsPage.classList.add("slide-out-right");
-    hide(projectsPage);
-    projectsBtn.classList.remove("selected");
+//     mcastPage.classList.add("slide-in-right");
+//   } else if (projectsPage.classList.contains("visible")) {
+//     reset(projectsPage);
+//     projectsPage.classList.add("slide-out-right");
+//     hide(projectsPage);
+//     projectsBtn.classList.remove("selected");
 
-    mcastPage.classList.add("slide-in-left");
-  } else if (cvPage.classList.contains("visible")) {
-    reset(cvPage);
-    cvPage.classList.add("slide-out-right");
-    hide(cvPage);
-    cvBtn.classList.remove("selected");
+//     mcastPage.classList.add("slide-in-left");
+//   } else if (cvPage.classList.contains("visible")) {
+//     reset(cvPage);
+//     cvPage.classList.add("slide-out-right");
+//     hide(cvPage);
+//     cvBtn.classList.remove("selected");
 
-    mcastPage.classList.add("slide-in-left");
-  }
+//     mcastPage.classList.add("slide-in-left");
+//   }
 
-  mcastPage.classList.remove("slide-out-left");
-  mcastPage.classList.remove("slide-out-right");
-  show(mcastPage);
-});
+//   mcastPage.classList.remove("slide-out-left");
+//   mcastPage.classList.remove("slide-out-right");
+//   show(mcastPage);
+// });
 
 projectsBtn.addEventListener("click", () => {
   projectsBtn.classList.add("selected");
@@ -75,14 +76,16 @@ projectsBtn.addEventListener("click", () => {
     homeBtn.classList.remove("selected");
 
     projectsPage.classList.add("slide-in-right");
-  } else if (mcastPage.classList.contains("visible")) {
-    reset(mcastPage);
-    mcastPage.classList.add("slide-out-left");
-    hide(mcastPage);
-    mcastBtn.classList.remove("selected");
+  }
+  // else if (mcastPage.classList.contains("visible")) {
+  //   reset(mcastPage);
+  //   mcastPage.classList.add("slide-out-left");
+  //   hide(mcastPage);
+  //   mcastBtn.classList.remove("selected");
 
-    projectsPage.classList.add("slide-in-right");
-  } else if (cvPage.classList.contains("visible")) {
+  //   projectsPage.classList.add("slide-in-right");
+  // }
+  else if (cvPage.classList.contains("visible")) {
     reset(cvPage);
     cvPage.classList.add("slide-out-right");
     hide(cvPage);
@@ -104,12 +107,14 @@ cvBtn.addEventListener("click", () => {
     homePage.classList.add("slide-out-left");
     hide(homePage);
     homeBtn.classList.remove("selected");
-  } else if (mcastPage.classList.contains("visible")) {
-    reset(mcastPage);
-    mcastPage.classList.add("slide-out-left");
-    hide(mcastPage);
-    mcastBtn.classList.remove("selected");
-  } else if (projectsPage.classList.contains("visible")) {
+  }
+  // else if (mcastPage.classList.contains("visible")) {
+  //   reset(mcastPage);
+  //   mcastPage.classList.add("slide-out-left");
+  //   hide(mcastPage);
+  //   mcastBtn.classList.remove("selected");
+  // }
+  else if (projectsPage.classList.contains("visible")) {
     reset(projectsPage);
     projectsPage.classList.add("slide-out-left");
     hide(projectsPage);
