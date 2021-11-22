@@ -114,7 +114,7 @@ a {
 
 .home-page,
 .mcast-page,
-.projects-page,
+/* .projects-page, */
 .cv-page {
   display: flex;
   flex-direction: column;
@@ -336,16 +336,69 @@ a {
                |__/                                |___/      
 */
 
+.projects-page h1 {
+  margin-top: 70px;
+  font-weight: 300;
+}
+
 .projects-grid {
-  border: 1px solid white;
-  width: 100%;
-  /* display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 200px 200px 200px; */
+  margin-top: 30px;
+  /* border: 1px solid white; */
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
 }
 
 .project {
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  justify-self: center;
+  transition: background-color 0.2s;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.project:hover {
+  background-color: rgba(221, 221, 221, 0.1);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+}
+
+.project-title {
+  margin-top: 10px;
+  font-weight: 400;
+  color: var(--white-colour);
+  text-align: center;
+}
+
+.project-description {
+  margin: 7px 0 30px 0;
+}
+
+.project-tech-list {
+  align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Ubuntu Mono", monospace;
+  color: var(--black-colour);
+  font-size: 14px;
+}
+
+.project-tech-list li {
+  margin: 2.5px 2.5px;
+  padding: 6px 12px;
+  background-color: rgba(221, 221, 221, 1);
+  border-radius: 50px;
+  transition: color 0.2s;
+}
+
+.project-tech-list li:hover {
+  color: var(--pink-colour);
 }
 
 /*
@@ -512,22 +565,22 @@ a {
 
 .slide-in-right {
   animation: slide-in-right 0.5s;
-  transform: translateX(0);
+  /* transform: translateX(0); */
 }
 
 .slide-out-right {
   animation: slide-out-right 0.5s;
-  transform: translateX(100%);
+  /* transform: translateX(100%); */
 }
 
 .slide-in-left {
   animation: slide-in-left 0.5s;
-  transform: translateX(0);
+  /* transform: translateX(0); */
 }
 
 .slide-out-left {
   animation: slide-out-left 0.5s;
-  transform: translateX(-100%);
+  /* transform: translateX(-100%); */
 }
 
 @keyframes slide-in-left {
@@ -713,6 +766,10 @@ a {
   .skills-column {
     margin-bottom: 50px;
   }
+
+  .projects-grid {
+    grid-template-columns: 50% 50%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -723,6 +780,10 @@ a {
 
   .intro {
     font-size: 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 100%;
   }
 }
 
