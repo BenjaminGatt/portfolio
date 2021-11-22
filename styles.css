@@ -66,6 +66,7 @@ a {
 .no-height {
   height: 0;
 }
+
 .no-width {
   width: 0;
 }
@@ -370,14 +371,39 @@ a {
 }
 
 .project-title {
-  margin-top: 10px;
+  margin: 15px 0;
+  font-size: 20px;
   font-weight: 400;
   color: var(--white-colour);
   text-align: center;
+  transition: color 0.2s;
+}
+
+.project-title:hover {
+  color: var(--pink-colour);
 }
 
 .project-description {
-  margin: 7px 0 30px 0;
+  margin-bottom: 10px;
+}
+
+.project-links-list {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.project-links-list li {
+  margin: 4px 0;
+}
+
+.project-links-list a {
+  color: var(--pink-colour);
+  transition: color 0.2s;
+}
+
+.project-links-list a:hover {
+  color: var(--white-colour);
 }
 
 .project-tech-list {
