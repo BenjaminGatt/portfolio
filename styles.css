@@ -66,6 +66,9 @@ a {
 .no-height {
   height: 0;
 }
+.no-width {
+  width: 0;
+}
 
 .hidden {
   visibility: hidden;
@@ -84,6 +87,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .header {
@@ -335,9 +339,9 @@ a {
 .projects-grid {
   border: 1px solid white;
   width: 100%;
-  display: grid;
+  /* display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px; */
 }
 
 .project {
