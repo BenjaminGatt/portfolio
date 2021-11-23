@@ -809,6 +809,15 @@ a {
     margin-bottom: 50px;
   }
 
+  .skills-list {
+    line-height: 1.25;
+    color: var(--white-colour);
+  }
+
+  .chevron-container {
+    display: none;
+  }
+
   .projects-grid {
     grid-template-columns: 50% 50%;
   }
