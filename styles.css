@@ -474,6 +474,8 @@ a {
   transition: color 0.2s, background-color 0.2s;
   cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .download-cv-icon,
