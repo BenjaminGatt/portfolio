@@ -392,11 +392,13 @@ a {
 
 .project-description a {
   color: var(--pink-colour);
-  transition: color 0.2s;
+  border-bottom: 0px solid rgba(221, 221, 221, 0.1);
+  transition: color 0.2s, border 0.3s;
 }
 
 .project-description a:hover {
   color: #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .project-links-list {
