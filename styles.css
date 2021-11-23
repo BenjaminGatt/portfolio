@@ -360,10 +360,15 @@ a {
   transition: background-color 0.2s;
   padding: 20px;
   border-radius: 15px;
+  margin-bottom: 30px;
 }
 
 .project:hover {
   background-color: rgba(221, 221, 221, 0.1);
+}
+
+.project:hover .project-title {
+  color: var(--pink-colour);
 }
 
 .project-img {
@@ -374,14 +379,10 @@ a {
 .project-title {
   margin: 15px 0;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--white-colour);
   text-align: center;
   transition: color 0.2s;
-}
-
-.project-title:hover {
-  color: var(--pink-colour);
 }
 
 .project-description {
